@@ -1,0 +1,86 @@
+import React from 'react';
+
+const Projects = () => {
+    const projects = [
+        {
+            title: "Feane Burger",
+            category: "Frontend",
+            desc: "Платформа быстрой доставки еды",
+            link: "https://sarvina107-ship-it.github.io/burger/"
+        },
+        {
+            title: "Benkov Art School",
+            category: "Web Design / Frontend",
+            desc: "Сайт художественной школы с историческим таймлайном и галереей работ.",
+            link: "https://benkov.vercel.app/"
+        },
+        {
+            title: "girls4girls App",
+            category: "Mobile / Expo",
+            desc: "Мобильное приложение, разработанное и собранное через EAS для платформы Android.",
+            link: "https://expo.dev/accounts/sara_18o/projects/girls4girls/builds/e7587bf1-3b3c-4388-89b4-c69f6a816efa"
+        }
+    ];
+
+    return (
+        <section className="relative min-h-screen bg-[#F9F9F7] py-24 px-8 overflow-hidden">
+
+
+
+            <div className="container mx-auto max-w-6xl z-10">
+                <div className="mb-20 space-y-6">
+                    <h2 className="text-6xl md:text-8xl font-serif text-[#2C3327] leading-tight">
+                        Мои <span className="italic text-[#D4A259] font-light">работы</span>
+                    </h2>
+                    <div className="flex items-center gap-4 text-[#6B7F5C] font-bold uppercase tracking-widest text-xs">
+                        <span className="w-12 h-[2px] bg-[#556B2F]"></span>
+                        Selected Projects
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {projects.map((project, index) => (
+                        <div key={index} className="group relative">
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block h-full transition-transform duration-500 active:scale-95"
+                            >
+                                <div className="absolute -inset-2 bg-gradient-to-r from-[#8FA382]/20 to-[#D4A259]/20 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="relative bg-white border border-gray-100 p-8 rounded-[2.5rem] shadow-sm hover:shadow-lg transition-all duration-500 flex flex-col h-full">
+                                    <span className="text-xs font-bold text-[#D4A259] uppercase tracking-widest mb-4">
+                                        {project.category}
+                                    </span>
+                                    <h3 className="text-2xl font-serif text-[#2C3327] mb-4 group-hover:text-[#556B2F] transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-[#4A5043] flex-grow leading-relaxed mb-8">
+                                        {project.desc}
+                                    </p>
+
+                                    <div className="flex items-center gap-2 text-[#2C3327] font-bold">
+                                        <span className="border-b-2 border-transparent group-hover:border-[#556B2F] transition-all">
+                                            Смотреть проект
+                                        </span>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 transition-transform">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="absolute -bottom-10 left-0 w-full opacity-10">
+                <svg width="100%" height="100" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                    <path d="M0,50 C150,20 350,80 600,50 C850,20 1050,80 1200,50 L1200,100 L0,100 Z" fill="#556B2F" />
+                </svg>
+            </div>
+        </section>
+    );
+};
+
+export default Projects;
