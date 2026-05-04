@@ -3,10 +3,11 @@ import React from 'react';
 const Projects = () => {
     const projects = [
         {
-            title: "Feane Burger",
+            title: "Weather App",
             category: "Frontend",
-            desc: "Платформа быстрой доставки еды",
-            link: "https://sarvina107-ship-it.github.io/burger/"
+            desc: "Платформа для быстрого отслеживания погоды",
+            tech: "JS, Tailwind",
+            link: "https://weather-five-phi-17.vercel.app/"
         },
         {
             title: "Benkov Art School",
@@ -15,10 +16,11 @@ const Projects = () => {
             link: "https://benkov.vercel.app/"
         },
         {
-            title: "girls4girls App",
-            category: "Mobile / Expo",
-            desc: "Мобильное приложение, разработанное и собранное через EAS для платформы Android.",
-            link: "https://expo.dev/accounts/sara_18o/projects/girls4girls/builds/e7587bf1-3b3c-4388-89b4-c69f6a816efa"
+            title: "Tech Store",
+            category: "Frontend",
+            desc: "Платформа для удобной покупки техники",
+            tech: "HTML, CSS, JS",
+            link: "https://tech-store-rosy.vercel.app/"
         }
     ];
 
